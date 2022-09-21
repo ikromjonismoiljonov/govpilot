@@ -1,0 +1,150 @@
+.ul1 li {
+  list-style: none;
+  display: inline-flex;
+  margin-top: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.ul1 li img {
+  width: 30px;
+}
+
+.ul2 {
+  width: 75%;
+}
+.ul2 li {
+  display: inline-block;
+}
+.ul2 li img {
+  width: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .ul2 {
+    width: 100%;
+  }
+}
+.fot {
+  width: 23%;
+  height: 42vh;
+  display: inline-block;
+}
+
+.headd {
+  width: 76%;
+  background-color: gray;
+  float: right;
+}
+
+header {
+  background-color: rgb(242, 244, 245);
+}
+
+.sc1 {
+  width: 100%;
+  background-color: rgb(242, 244, 245);
+}
+
+@media screen and (max-width: 992px) {
+  .fot {
+    display: none;
+  }
+  .headd {
+    width: 100%;
+  }
+}
+.imgicon {
+  width: 25px;
+  height: auto;
+}
+
+.divh {
+  width: 75%;
+}
+
+.ppf {
+  font-size: 13pt;
+}
+
+@media screen and (max-width: 1400px) {
+  .divh {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .divyo {
+    display: none;
+  }
+  .pyo {
+    display: none;
+  }
+  .imgyo {
+    width: 100px;
+  }
+  .divmtt {
+    margin-top: 0px;
+  }
+  main {
+    margin-top: -270px;
+  }
+  .hya {
+    font-size: 15pt;
+  }
+}
+.p33 {
+  font-size: 14pt;
+}
+
+@media screen and (max-width: 991px) {
+  .divnone {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ppf {
+    font-size: 7pt;
+  }
+  .h33 {
+    font-size: 10pt;
+  }
+  .p33 {
+    font-size: 7pt;
+  }
+}
+#besh {
+  border: 2px solid gray;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+  .divyu {
+    display: none;
+  }
+  .shax {
+    font-size: 10pt;
+  }
+}
+.divhov:hover {
+  background-color: white;
+}
+
+.divimg {
+  background-image: url(https://tinfis.uz/img/circle1.svg);
+  background-size: cover;
+  height: 26 vh;
+}
+
+ul li {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
