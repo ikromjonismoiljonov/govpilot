@@ -1,1 +1,675 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tinfis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../sass/style.css">
+  </head>
+  <body>
+    <header class="" style="height: 70vh;">
+      
+        <nav class="bg-white">
+            <div class="container navbar">
+            <img src="https://tinfis.uz/img/Logo.svg" class="display-inline-block imgyo " width="150px" height="auto" alt="">
+            <div class="w-50 divyo" style="border: 2px solid rgb(160, 160, 160); border-radius: 30px;"> <input placeholder="O'zingiz xohlagan narsani qidiring . . ." class="ms-2" style="border-radius: 50px; width: 80%; border: none; outline: none; height: 40px;" type="text">
+                <button class="" style=" outline: 0px; width: 10%; height: 40px; border: 0; background: none; float: right;"><img src="../search.svg" alt=""></button>
+            </div>
+            <ul class="ul1 navbar divyo">
+         <!-- Button trigger modal -->
+<a class="btn" onclick="slide()" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+   <li><img class="" src="https://tinfis.uz/img/cart.svg" alt="">
+    <span style="font-size: 7pt;" class="position-absolute top-0 mt-4 start-100 translate-middle badge rounded-pill bg-danger">
+      1
+      <span class="visually-hidden">unread messages</span></li> 
+</a>
 
+<!-- Modal -->
+<div class="modal " id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="rean" class="modal-dialog modal-fullscreen animate__animated animate__slideInRight float-end" style="width: 25%;">
+      <div class="modal-content">
+        
+        <button id="btnhi" onclick="hide()" data-bs-toggle="modal" data-bs-target="#exampleModal"  class="btn btn4 position-absolute rounded-circle mt-5" style="margin-left: -30px; background-color: white; border-color: rgba(112, 110, 110, 0.5); width: 70px; height: 70px; border: 2px solid rgba(112, 110, 110, 0.5);">
+          <i style="color:  rgba(112, 110, 110, 0.5);" class="fa-solid fa-arrow-right fs-2"></i>
+        </button>
+      </div>
+    </div></div>
+
+              <!-- modal 2 -->
+              <!-- <div class="modal fade"  id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel2 ">kod</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="navbar" action="">
+                       <div class="col-2">
+                        <input type="email" class="  form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                       </div>
+                       <div class="col-2">
+                        <input type="email" class="  form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                       </div>
+                       <div class="col-2">
+                        <input type="email" class="  form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
+                       </div>
+                       <div class="col-2">
+                        <input type="email" class="  form-control" id="exampleInputEmail4" aria-describedby="emailHelp">
+                       </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button onclick="checkk()" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Back to first</button>
+                    </div>
+                    <p id="pwar"></p>
+                  </div>
+                </div>
+              </div> -->
+              <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel">Войдите или зарегистрируйтесь, чтобы продолжить</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                          <form action="">
+                            <label for="inputPassword5" class="form-label">Password</label>
+                            <input type="text" value="+9989" onchange="changedd()" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button id="btn1" class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Получить код</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel2">Войдите cod</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                         <form class="d-inline-flex justify-content-center" action="">
+                          <div class="col-3 d-inline-flex ms-2">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          </div>
+                          <div class="col-3 d-inline-flex ms-2">
+                            <input  type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+                          </div>
+                          <div class="col-3 d-inline-flex ms-2">
+                            <input  type="email" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
+                          </div>
+                          <div class="col-3 d-inline-flex ms-2">
+                            <input onchange="chan1()"  type="email" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp">
+                          </div>
+                        </form>
+                        <h1 id="h1"></h1>
+                    </div>
+                    <div class="modal-footer">
+                      <button id="btn2" onclick="tek()" class="btn btn-primary">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="" data-bs-toggle="modal" href="#exampleModalToggle2" role="button"><li><img src="../profile.svg" alt=""></li></a>
+            </ul>
+            </div>
+            <div class="divyo">
+            <div class="container navbar mt-5 divmtt divyo">
+                <p  class="pyo" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: inline-block;"><img src="../catalogBlack.svg" alt=""> Kategoriyalar</p>
+                <div class="float-end w-75">
+                    <ul class="ul2 navbar">
+                        <li class="pyo text-dark"><img src="../percent.svg" alt="">  Aksiyalar</li>
+                        <li class="pyo text-dark"><img src="../shopping-bag.svg" alt="">  Do'konlar</li>
+                        <li class="pyo text-dark"><img src="../star.svg" alt="">  Brendlar</li>
+                        <li class="pyo text-dark"><img src="../send.svg" alt="">  Aviyachiptalar</li>
+                    </ul>
+                </div>  
+            </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="fot mt-5" >
+              <div id="navbarScroll">
+                <ul class="navbar-nav ms-4 my-2 my-lg-0 navbar-nav-scroll ulul" style="--bs-scroll-height: 400px;">
+                  <li class="nav-item mt-4">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/n3Bd942KHNUu9jDbqViGvUwsHlElZd2P0ezcI6Ep.svg" alt=""><span class="mt-1 ms-3">Elektronika</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/s6RSXKfMUTyBC1vfVOQm4uwZAbxrnDCnMbd8gdno.svg" alt=""><span class="mt-1 ms-3">Maishiy tehnika</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/jqvkX21uSzYMg06wNcnZGQHXtXlSWiLCSYCvT2A4.svg" alt=""><span class="mt-1 ms-3">Oziq ovqatlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/dhMtMgA2dZSvD8mKHT5C8iJQ1OYWaK6JQ2M5XYLH.svg" alt=""><span class="mt-1 ms-3">Ayollar uchun</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/4ijca4JXjIXbBFyMXiG8j6NQFuvDzGh2QlV3r9hC.svg" alt=""><span class="mt-1 ms-3">Erkaklar uchun</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/KkUY13fiMOSd2oGg3lCHGU4NxRpr1Z0q9k60fQD9.svg" alt=""><span class="mt-1 ms-3">Bolalar uchun</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-3">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/xMlmdSvMYqbPCLkzM1TWeUTacmLdklnt2SSZAbhK.svg" alt=""><span class="mt-1 ms-3">Poyafzalspan><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li>
+                  <li class="nav-item mt-2">
+                    <a class="nav-link" href="#"><img class="imgicon" src="https://back.tinfis.uz/public/uploads/all/5PgXoZLxL5NHZm0zhcR3VTS8iFdXQ9VQXcJK2qb0.svg" alt=""><span class="mt-1 ms-3">Aksesuarlar</span><i class="fa-solid fa-plus float-end me-1 text-secondary"></i></a>
+                  </li> 
+                </ul>
+              </div>
+            </div>
+            <div class="headd mt-5">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://back.tinfis.uz/public/uploads/all/f1PYQAtVci0OhSbulyTQFV1fh0xG43QGt0daOsVd.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://back.tinfis.uz/public/uploads/all/7jueYgyNSrLWCM4qYE1ZOHq8hGHHyY1oy8UUc93n.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://back.tinfis.uz/public/uploads/all/FdnkaSBmULqdNyKLsqg2we2Yc1ji9g02xOSHcqzQ.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      
+    </header>
+    <main>
+      <section class="sc1">
+        <div class="container">
+        <div class="navbar"><h1 class="hya">Yangi maxsulotlar</h1>
+          <a href="" style="text-decoration: none;"><h1 style="font-size: 13pt;">Barchasi</h1></a>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button style="opacity: 0.1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button style="opacity: 0.1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button style="opacity: 0.1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+        <div style="margin: auto;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div>
+                <div class="container overflow-hidden text-center">
+                  <div class="row gx-2">
+                   <a class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                    <div>
+                      <div class="p-3 border bg-light card ">
+                       <img id="img15" src="https://back.tinfis.uz/public/uploads/all/MtRgQhN5u6MMd3v4ZV5mUTXvotrZTY7FJyAscO96.jpg" alt="">
+                       <div class="card-body">
+                         <p id="p15" class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                         <div class="divh m-auto">
+                           <h3 id="h15" class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                         </div>
+                         <button onclick="add()" class="btn col-10 m-auto btn-primary">Add to Cart</button>
+                       </div>
+                      </div>
+                     </div>
+                   </a>
+                   <a  class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                    <div>
+                      <div class="p-3 border bg-light card">
+                        <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2F2022%2F08%2Fthumb_mobile%2FZUAUGYNuRuApukpHCqFMpQrLxqZ0E55BxrkdXTDl_thumbmobile.jpg&w=1200&q=75" alt="">
+                        <div class="card-body">
+                          <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                          <div class="divh m-auto">
+                            <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                   </a>
+                   <a class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                    <div>
+                      <div class="p-3 border bg-light card">
+                        <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FKGL2PfiS8o2fw3RUM2gFaFGJJM9JOVdSRaRPq95C.jpg&w=1920&q=10" alt="">
+                        <div class="card-body">
+                          <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                          <div class="divh m-auto">
+                            <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </a>
+                   <a class="col col-xl-3 col-lg-3 col-md-4 divnone" href="../html/twopage.html">
+                    <div>
+                      <div class="p-3 border bg-light card">
+                        <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FYePNLEt0nlXGsw6CWJIxOGY4hpJSPAZEgSc7tbTV.jpg&w=1920&q=75" alt="">
+                        <div class="card-body">
+                          <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                          <div class="divh m-auto">
+                            <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div>
+                <div class="container overflow-hidden text-center">
+                  <div class="row gx-2">
+                    <a class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                    <div>
+                     <div class="p-3 border bg-light card">
+                      <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2F2OwQECz0gNOsw2VDSgFsJeHFyfCvVIUt61Q477nd.jpg&w=1920&q=75" alt="">
+                      <div class="card-body">
+                        <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                        <div class="divh m-auto">
+                          <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </a>
+                    <a  class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                    <div>
+                      <div class="p-3 border bg-light card">
+                        <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FEX5ROryKVkHt6ahozE7d7JKjdFwjz3u1nPrqfNmg.jpg&w=1920&q=10" alt="">
+                        <div class="card-body">
+                          <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                          <div class="divh m-auto">
+                            <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </a>
+                    <a  class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                    <div>
+                      <div class="p-3 border bg-light card">
+                        <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2Fp1gOfhmbKOJzUUjbWmqdXFu3u0Jo4HGjmKi5ih4u.jpg&w=1920&q=10" alt="">
+                        <div class="card-body">
+                          <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                          <div class="divh m-auto">
+                            <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </a>
+                    <a  class="col col-xl-3 col-lg-3 col-md-4 divnone" href="../html/twopage.html">
+                    <div>
+                      <div class="p-3 border bg-light card">
+                        <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FaMUQVWcbzVlQSbh9VmyjVRlFVYFvnEM0vltGtjJF.jpg&w=1920&q=10" alt="">
+                        <div class="card-body">
+                          <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                          <div class="divh m-auto">
+                            <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+             <div>
+              <div class="container overflow-hidden text-center">
+                <div class="row gx-2">
+                  <a  class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                  <div>
+                   <div class="p-3 border bg-light card">
+
+                    <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FgmcGxAfD49NZPTdHC71kk3m4YZRDUvzsbpIafwOv.jpg&w=1920&q=10" alt="">
+                    <div class="card-body">
+                      <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                      <div class="divh m-auto">
+                        <h3 class="h33 text-warning display ms-3 mb-">35.0 $</h3>                                                                                  
+                      </div>
+                    </div>
+                   </div>
+                  </div>
+                  </a>
+                  <a  class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                  <div>
+                    <div class="p-3 border bg-light card">
+                      <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FC1xdPBWo6JLZ4sAW4FMFVHBg6ZKlDF2NU4zXaqSH.jpg&w=1920&q=10" alt="">
+                      <div class="card-body">
+                        <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                        <div class="divh m-auto">
+                          <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+                  <a  class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4" href="../html/twopage.html">
+                  <div>
+                    <div class="p-3 border bg-light card">
+                      <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FOdklKKJZfXrkC3KdruR0DgFTEwiwCIvqQsoqhde9.jpg&w=1920&q=75" alt="">
+                      <div class="card-body">
+                        <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                        <div class="divh m-auto">
+                          <h3 class=" text-warning h33 display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+                  </a>
+                  <a  class="col col-xl-3 col-lg-3 col-md-4 divnone" href="../html/twopage.html">
+                  <div>
+                    <div class="p-3 border bg-light card">
+                      <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FonCAZZdfxs95YDImt8gt3PMc7Osd7aVcsUakbrma.jpg&w=1920&q=75" alt="">
+                      <div class="card-body">
+                        <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                        <div class="divh m-auto">
+                          <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+             </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" style="position: absolute; margin-left: -87px; opacity: 1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+           <div class="bg-white rounded-circle shadow" style="width: 60px; height: 60px;"> 
+            <i class="fa-solid fa-angle-left fs-3 mt-3 text-warning"></i>
+          </div>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" style="position: absolute; margin-left: 85px; opacity: 1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <div class="bg-white rounded-circle shadow" style="width: 60px; height: 60px; position: absolute; margin-left: 170px;"> 
+              <i class="fa-solid fa-angle-right fs-3 mt-3 text-warning"></i>
+            </div>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+         
+        </div>
+        </div>
+
+        <div class="container mt-3">
+          <div class="px-1 text-center">
+            <div class="row gx-3">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/Ihw5F5ex34vrPhW3badUkiSAlQzFDSNhK9cRYreM.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/emszzncOvQ6MZ01y4GGS1OimcKiZ3hiOtR6Izxq6.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/pTcKTL86A9j0vfO4RqIt9l7ZlS6ernLIazTVHcvj.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/aNcboJmRb0IVLBqIuhqzbM3sBZW8zQAC77sIIS9e.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/MTc3HFWZ02ythYvLAutv4i5AH1UOJASpGLtShHBz.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">  
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/B71ifj6XDgkpQf8raFjE1JaKGkYL7yAGoEJ4HKva.jpg" alt="">
+              </div>
+            </div>
+          </div> 
+          <section class="mt-5">
+            <div class="container">
+              <div class="navbar"><h1 class="hya">Yangi maxsulotlar</h1>
+                <a href="" style="text-decoration: none;"><h1 style="font-size: 13pt;">Barchasi</h1></a>
+              </div>
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button style="opacity: 0.1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button style="opacity: 0.1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button style="opacity: 0.1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+              <div style="margin: auto;">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div>
+                      <div class="container overflow-hidden text-center">
+                        <div class="row gx-2">
+                          <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                           <div class="p-3 border bg-light card ">
+                            <img src="https://back.tinfis.uz/public/uploads/all/MtRgQhN5u6MMd3v4ZV5mUTXvotrZTY7FJyAscO96.jpg" alt="">
+                            <div class="card-body">
+                              <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                              <div class="divh m-auto">
+                                <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                              </div>
+                            </div>
+                           </div>
+                          </div>
+                          <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="p-3 border bg-light card">
+                              <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2F2022%2F08%2Fthumb_mobile%2FZUAUGYNuRuApukpHCqFMpQrLxqZ0E55BxrkdXTDl_thumbmobile.jpg&w=1200&q=75" alt="">
+                              <div class="card-body">
+                                <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                                <div class="divh m-auto">
+                                  <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                                </div>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="p-3 border bg-light card">
+                              <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FKGL2PfiS8o2fw3RUM2gFaFGJJM9JOVdSRaRPq95C.jpg&w=1920&q=10" alt="">
+                              <div class="card-body">
+                                <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                                <div class="divh m-auto">
+                                  <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-xl-3 col-lg-3 col-md-4 divnone">
+                            <div class="p-3 border bg-light card">
+                              <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FYePNLEt0nlXGsw6CWJIxOGY4hpJSPAZEgSc7tbTV.jpg&w=1920&q=75" alt="">
+                              <div class="card-body">
+                                <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                                <div class="divh m-auto">
+                                  <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div>
+                      <div class="container overflow-hidden text-center">
+                        <div class="row gx-2">
+                          <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                           <div class="p-3 border bg-light card">
+                            <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2F2OwQECz0gNOsw2VDSgFsJeHFyfCvVIUt61Q477nd.jpg&w=1920&q=75" alt="">
+                            <div class="card-body">
+                              <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                              <div class="divh m-auto">
+                                <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="p-3 border bg-light card">
+                              <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FEX5ROryKVkHt6ahozE7d7JKjdFwjz3u1nPrqfNmg.jpg&w=1920&q=10" alt="">
+                              <div class="card-body">
+                                <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                                <div class="divh m-auto">
+                                  <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                            <div class="p-3 border bg-light card">
+                              <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2Fp1gOfhmbKOJzUUjbWmqdXFu3u0Jo4HGjmKi5ih4u.jpg&w=1920&q=10" alt="">
+                              <div class="card-body">
+                                <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                                <div class="divh m-auto">
+                                  <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-xl-3 col-lg-3 col-md-4 divnone">
+                            <div class="p-3 border bg-light card">
+                              <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FaMUQVWcbzVlQSbh9VmyjVRlFVYFvnEM0vltGtjJF.jpg&w=1920&q=10" alt="">
+                              <div class="card-body">
+                                <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                                <div class="divh m-auto">
+                                  <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                   <div>
+                    <div class="container overflow-hidden text-center">
+                      <div class="row gx-2">
+                        <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                         <div class="p-3 border bg-light card">
+      
+                          <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FgmcGxAfD49NZPTdHC71kk3m4YZRDUvzsbpIafwOv.jpg&w=1920&q=10" alt="">
+                          <div class="card-body">
+                            <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                            <div class="divh m-auto">
+                              <h3 class="h33 text-warning display ms-3 mb-">35.0 $</h3>                                                                                  
+                            </div>
+                          </div>
+                         </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                          <div class="p-3 border bg-light card">
+                            <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FC1xdPBWo6JLZ4sAW4FMFVHBg6ZKlDF2NU4zXaqSH.jpg&w=1920&q=10" alt="">
+                            <div class="card-body">
+                              <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                              <div class="divh m-auto">
+                                <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-3 col-md-4 col-sm-4 col-4">
+                          <div class="p-3 border bg-light card">
+                            <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FOdklKKJZfXrkC3KdruR0DgFTEwiwCIvqQsoqhde9.jpg&w=1920&q=75" alt="">
+                            <div class="card-body">
+                              <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                              <div class="divh m-auto">
+                                <h3 class=" text-warning h33 display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                              </div>
+                            </div>  
+                          </div>
+                        </div>
+                        <div class="col col-xl-3 col-lg-3 col-md-4 divnone">
+                          <div class="p-3 border bg-light card">
+                            <img src="https://tinfis.uz/_next/image?url=https%3A%2F%2Fback.tinfis.uz%2Fpublic%2Fuploads%2Fall%2FonCAZZdfxs95YDImt8gt3PMc7Osd7aVcsUakbrma.jpg&w=1920&q=75" alt="">
+                            <div class="card-body">
+                              <p class="ppf">O'yin uchun Noutbuk Legion 5</p>
+                              <div class="divh m-auto">
+                                <h3 class="h33 text-warning display navbar ms-3 mb-">35.0 $</h3>                                                                                  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" style="position: absolute; margin-left: -87px; opacity: 1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                 <div class="bg-white rounded-circle shadow" style="width: 60px; height: 60px;"> 
+                  <i class="fa-solid fa-angle-left fs-3 mt-3 text-warning"></i>
+                </div>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" style="position: absolute; margin-left: 85px; opacity: 1;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <div class="bg-white rounded-circle shadow" style="width: 60px; height: 60px; position: absolute; margin-left: 170px;"> 
+                    <i class="fa-solid fa-angle-right fs-3 mt-3 text-warning"></i>
+                  </div>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+               
+              </div>
+              </div>  
+          </section>
+          <div class="px-1 text-center mt-5">
+            <div class="row gx-3">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/voxjcYdRtMknYTqdMmE5VMikPTyTCkuv8bYADg9A.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/hH8p41pAYP0e1kmUR3m7d2c8ZSSIt5h9XoS64IVH.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/QG8z2tAMp2jzkiDiiV5ei7KxApbgCxTMRulTBIOM.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/voxjcYdRtMknYTqdMmE5VMikPTyTCkuv8bYADg9A.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/TbIIX7viWTfko1hllS87zSm56WJ3rnhlRSkC2JLa.jpg" alt="">
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-xxl-6 col-sm-12 mt-3">
+                <img class="w-100 rounded" src="https://back.tinfis.uz/public/uploads/all/gaijIG33swEsYy29fb5XiN9MOOj5m0iDFwGDeZVC.jpg" alt="">
+              </div>  
+            </div>
+          </div> 
+        </div>
+
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
